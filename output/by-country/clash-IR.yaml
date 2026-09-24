@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: 🇮🇷 IR 01 - xiaohe
   type: ss
-  server: p1tun4.greewebservices.ir
-  port: 1080
+  server: p1tun2.greewebservices.ir
+  port: 2060
   cipher: chacha20-ietf-poly1305
   password: cVvgP0Bz69hsErPBvqKbwQ
   udp: true
