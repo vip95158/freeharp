@@ -4,26 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 FI 01 - xiaohe
-  type: vless
-  server: karo.rick313.dpdns.org
-  port: 2087
-  uuid: 2e4e6812-be87-415b-a2e8-b0e17e9f2da7
+- name: 🇲🇾 MY 01 - xiaohe
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: karo.rick313.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇮 FI 01 - xiaohe
+  - 🇲🇾 MY 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮 FI 01 - xiaohe
+  - 🇲🇾 MY 01 - xiaohe
 rules:
 - MATCH,PROXIES
