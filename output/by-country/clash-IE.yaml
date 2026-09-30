@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇮🇪 IE 01 - xiaohe
   type: vless
-  server: 188.114.97.6
+  server: pruritus.patiromer.workers.dev
   port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  uuid: 0659eac3-137b-4002-ba2e-88da4d071235
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: edgetunnel-4uw.pages.dev
+  servername: pruritus.patiromer.workers.dev
   network: ws
   ws-opts:
-    path: /fp=chrome?ed#?ed=512
+    path: /
     headers:
-      Host: edgetunnel-4uw.pages.dev
+      Host: pruritus.patiromer.workers.dev
 - name: 🇮🇪 IE 02 - xiaohe
   type: vless
   server: 45.141.234.138
@@ -43,7 +43,7 @@ proxies:
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /
+    path: /?Telegram---mtmvpn---mtmvpn---mtmvpn---mtmvpn
     headers:
       Host: edgetunnel-4uw.pages.dev
 - name: 🇮🇪 IE 04 - xiaohe
@@ -57,23 +57,9 @@ proxies:
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: 🇮🇪 IE 05 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shephe.dpdns.org
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: shephe.dpdns.org
+      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -83,7 +69,6 @@ proxy-groups:
   - 🇮🇪 IE 02 - xiaohe
   - 🇮🇪 IE 03 - xiaohe
   - 🇮🇪 IE 04 - xiaohe
-  - 🇮🇪 IE 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -93,6 +78,5 @@ proxy-groups:
   - 🇮🇪 IE 02 - xiaohe
   - 🇮🇪 IE 03 - xiaohe
   - 🇮🇪 IE 04 - xiaohe
-  - 🇮🇪 IE 05 - xiaohe
 rules:
 - MATCH,PROXIES
