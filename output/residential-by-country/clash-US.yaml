@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  type: vless
+  server: ld.235231.xyz
+  port: 443
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ld.235231.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ld.235231.xyz
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+rules:
+- MATCH,PROXIES
