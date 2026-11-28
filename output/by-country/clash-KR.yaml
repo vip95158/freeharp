@@ -80,18 +80,12 @@ proxies:
     headers:
       Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  type: ss
+  server: 211.233.33.228
+  port: 8388
+  cipher: aes-256-gcm
+  password: qpowi_vip_tunnel_2026_secure
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 08 - xiaohe
   type: vmess
   server: 129.154.61.196
